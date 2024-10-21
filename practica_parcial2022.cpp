@@ -46,7 +46,7 @@ void Producto::setNombre(const char* nom)
 
 int Producto::getCant()
 {
-    return this->cant_exc = cant_exc;
+    return this->cant_exc;
 }
 
 // TODO: ---------- Clase Excursiones ---------------
@@ -64,7 +64,7 @@ Excursiones::Excursiones() {}
 
 double Excursiones::getMonto()
 {
-    return this->monto = monto;
+    return this->monto;
 }
 
 void Excursiones::setMonto(double monto)
@@ -95,7 +95,7 @@ Viaje::Viaje() {}
 
 int Viaje::getKilometros()
 {
-    return this->km_recorridos = km_recorridos;
+    return this->km_recorridos;
 }
 
 void Viaje::setKilometros(int kms)
@@ -105,7 +105,7 @@ void Viaje::setKilometros(int kms)
 
 double Viaje::getMonto()
 {
-    return this->monto = monto;
+    return this->monto;
 }
 
 void Viaje::setMonto(double monto)
