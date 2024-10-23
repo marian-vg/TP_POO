@@ -21,7 +21,7 @@ protected:
     double monto;
     char* nombre;
     char tipo[1];
-    int cant_exc;
+    int cant_exc = 0;
 public:
     Producto();
     char* getNombre();
@@ -243,10 +243,10 @@ void Gestor::MayoresTour()
         exit;
     }
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < productos.size(); i++)
     {
         if (productos[i]->getTipo() == 'T')
-        archivo_tour << productos[i]->getNombre() << ": " << productos[i]->getMonto() << std::endl;
+        archivo_tour << productos[i]->getNombre() << ": " << productos[i]->getCant() << std::endl;
     }
 
     archivo_tour.close();
@@ -255,7 +255,7 @@ void Gestor::MayoresTour()
     for (int i = 0; i < 5; i++)
     {
         if (productos[i]->getTipo() == 'T')
-        std::cout << " - "<< productos[i]->getNombre() << ": " << productos[i]->getMonto() << std::endl;
+        std::cout << " - "<< productos[i]->getNombre() << ": " << productos[i]->getCant() << " cantidad de excursiones"<<std::endl;
     }
 }
 
